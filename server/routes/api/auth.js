@@ -45,6 +45,7 @@ router.post('/', (req, res) => {
     })
 })
 
+// 로그아웃은 프론트에서 상태처리
 router.post('/logout', (req, res) => {
     res.json('로그아웃 성공')
 })
@@ -54,7 +55,7 @@ router.get('/user', auth, async(req, res) => {
         const user = await User.findById(req.user.id).select('-password');
 
         if(!user) throw Error('유저가 존재하지 않습니다.');
-        
+
         res.json(user);
     } catch(e) {
         console.log(e)
