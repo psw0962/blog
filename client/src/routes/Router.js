@@ -2,12 +2,12 @@ import React, { Fragment } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 
-const Myrouter = () => (
+const MyRouter = () => (
     <Fragment>
         <Header />
-        <h1>Hello Body</h1>
+            <h1>Hello Body</h1>
         <Footer />
     </Fragment>
 );
 
-export default Myrouter
+export default MyRouter;
